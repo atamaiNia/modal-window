@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, commodi
+      ut doloremque repellendus illum laboriosam sint facere eveniet dolores
+      sequi perferendis dignissimos quasi voluptatibus iusto modi sit voluptates
+      ipsam quo corporis eligendi inventore ab, et soluta! Minima, iure atque!
+      Laborum esse sit cum doloremque voluptates hic nesciunt alias architecto
+      similique possimus, voluptate repellendus omnis aliquid. Fugit maxime
+      autem vero. Dolore debitis enim sint assumenda expedita ullam aperiam
+      ratione error possimus, officiis neque eligendi soluta quia eius similique
+      vitae vel corporis odio ut temporibus. Doloribus dolores nobis tempore
+      laboriosam et dolorum nihil dolorem, aliquid explicabo atque, id, impedit
+      officiis obcaecati molestias eaque aperiam harum repellendus facere
+      nostrum voluptate laborum. Optio molestias officiis eveniet earum in
+      aperiam. Veniam excepturi libero deleniti alias, porro placeat aspernatur
+      explicabo eveniet! Autem nihil illum reiciendis placeat incidunt pariatur
+      cumque consequuntur rem blanditiis aut amet magni, atque ratione non. Cum
+      numquam ipsum qui consequuntur adipisci cumque distinctio necessitatibus
+      veritatis ipsam quo? Dolores modi iure, adipisci molestias alias
+      repellendus nemo rem sit saepe dignissimos! Voluptatum, veritatis rem?
+      Doloremque placeat eum neque animi? Corrupti adipisci maiores ducimus
+      labore blanditiis cupiditate suscipit rerum repellat ab culpa eligendi
+      commodi explicabo, aliquam quo numquam necessitatibus quia vero nihil
+      eaque, quis aperiam expedita!
+    </p>
+    <button data-open-modal>Open modal</button>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in impedit,
+      eligendi possimus neque sit dicta quod debitis recusandae quae odio
+      excepturi, assumenda sed quia delectus libero ipsum, illum eaque deleniti
+      similique esse saepe sequi praesentium. Aut ipsa rem minus ad illum qui
+      veniam harum cum sed obcaecati, aliquid quidem reiciendis iure temporibus
+      eos amet numquam eius. A, officia temporibus! Voluptates nesciunt ea
+      quisquam dolores vero! Aspernatur similique repellat, maiores vel hic illo
+      tempora magni eaque possimus architecto, illum optio quibusdam vitae
+      incidunt dolorum nemo fugit dolore nulla atque! Culpa minus ipsam deserunt
+      unde minima rerum dolorem, sit maiores aperiam blanditiis corporis
+      eligendi perferendis consectetur ipsa inventore accusantium sint porro at
+      iusto fuga aliquam beatae. Est consequuntur dignissimos repellat voluptate
+      sequi nulla ducimus voluptatibus numquam laborum, fugit suscipit nihil
+      consectetur minima saepe dolore repudiandae temporibus odio soluta
+      expedita. Temporibus odit repellat placeat magni harum repellendus.
+      Quaerat non necessitatibus vitae possimus!
+    </p>
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quis
+          fugit totam corporis doloribus, fugiat perferendis distinctio, odit
+          enim sint at minus debitis voluptates delectus recusandae modi iure
+          ipsum ea nam? Ab dignissimos velit, possimus provident error
+          temporibus distinctio odio sint placeat alias voluptatibus, quasi
+          ducimus magnam vero omnis in optio cum. Harum, odit placeat! Tenetur
+          laboriosam eligendi obcaecati error doloremque alias est facere
+          officiis vel quasi a nam, consectetur veniam odit optio provident.
+          Delectus temporibus tempore magni sit incidunt. Laudantium nisi alias
+          perspiciatis id, blanditiis reiciendis placeat recusandae, a enim
+          totam dolorum, culpa nulla. Molestiae quidem libero iusto culpa
+          obcaecati, laboriosam consequuntur quisquam earum fuga esse nobis,
+          enim cupiditate cum nisi impedit optio! Adipisci velit neque vitae
+          ipsum, ex voluptatem molestiae nam fuga quasi reiciendis, ad eos
+          laudantium cumque, similique placeat enim sapiente magni consectetur
+          molestias soluta dicta. Reiciendis est eveniet voluptatem perferendis
+          quia. Pariatur accusantium optio rem sint.
+        </p>
+        <button data-close-modal class="btn-modal">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Це клік в бекдроп");
+      }
+    </script>
+  </body>
+</html>
